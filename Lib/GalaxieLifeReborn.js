@@ -2,6 +2,12 @@ class GalaxieLifeReborn{
     constructor() {
         this.utils = require('../Utils/utils')
     }
+
+    /**
+     * Get Userprofile
+     * @param username {String<username>} The username
+     * @returns {Promise<Object>}
+     */
     getUserProfile(username){
         return new Promise(((resolve, reject) => {
             this.utils.request("https://api.galaxylifereborn.com/modules/botuser?info="+username).then(data => {
@@ -49,6 +55,11 @@ class GalaxieLifeReborn{
         }))
     }
 
+    /**
+     * Get server status
+     * @returns {Promise<Object>}
+     */
+
     getServerStatus(){
         return new Promise(((resolve, reject) => {
             this.utils.request('https://mariflash.galaxylifereborn.com/status').then((data) =>{
@@ -59,6 +70,12 @@ class GalaxieLifeReborn{
         }))
     }
 
+    /**
+     * Get alliance data
+     * @param name {String<name>} The name of alliance
+     * @returns {Promise<Object>}
+     */
+
     getAlliance(name) {
         return new Promise(((resolve, reject) => {
             this.utils.request('https://mariflash.galaxylifereborn.com/alliances/info?name='+name).then((data) =>{
@@ -68,6 +85,12 @@ class GalaxieLifeReborn{
             })
         }))
     }
+
+    /**
+     * Get alliance members
+     * @param name {String<name>} The name of alliance
+     * @returns {Promise<Array>}
+     */
     getAllianceMember(name) {
         return new Promise(((resolve, reject) => {
             this.utils.request('https://mariflash.galaxylifereborn.com/alliances/members?name='+name).then((data) =>{
@@ -77,6 +100,10 @@ class GalaxieLifeReborn{
             })
         }))
     }
+    /**
+     * Get leaderboard of the biggest chips players
+     * @returns {Promise<Array>}
+     */
     getTopChipsPlayers(){
         return new Promise(((resolve, reject) => {
             this.utils.request('https://mariflash.galaxylifereborn.com/leaderboard/chips').then((data) =>{
@@ -86,6 +113,11 @@ class GalaxieLifeReborn{
             })
         }))
     }
+
+    /**
+     * Get leaderboard of level players ranking
+     * @returns {Promise<Array>}
+     */
     getTopLevelPlayers(){
         return new Promise(((resolve, reject) => {
             this.utils.request('https://mariflash.galaxylifereborn.com/leaderboard/levels').then((data) =>{

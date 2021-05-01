@@ -31,3 +31,28 @@ Get the ranking of the biggest chips players
 - getTopLevelPlayers
 
 Get leaderboard of level players ranking
+
+
+## Exemple 
+
+```js
+let GLR = require('galaxielifereborn-api-wrapper')
+
+GLR.getTopLevelPlayers().then((data) =>{
+    console.log(data) //Return leaderboard
+}).catch((err) =>{
+    console.log(err)
+})
+
+GLR.getUserProfile("IamUser").then((data) =>{
+    console.log(data) //Return UserProfile
+}).catch((err) =>{
+    console.log(err)
+})
+
+GLR.getAlliance("IamAlliance").then((data) =>{
+    console.log(data) //Return UserProfile
+}).catch((err) =>{
+    console.log(err)
+})
+```
