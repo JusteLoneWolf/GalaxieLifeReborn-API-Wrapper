@@ -1,6 +1,6 @@
 {
   "name": "galaxielifereborn-api-wrapper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple NodeJS module for Galaxie Life Reborn",
   "main": "main.js",
   "scripts": {
