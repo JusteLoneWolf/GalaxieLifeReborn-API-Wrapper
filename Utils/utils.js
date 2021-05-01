@@ -1,6 +1,6 @@
 const https = require('https');
 
-const request = (url) =>{
+const request = (url) => {
     return new Promise((resolve, reject) => {
         https.get(url, (resp) => {
             let data = '';
@@ -8,14 +8,17 @@ const request = (url) =>{
                 data += chunk;
             });
             resp.on('end', () => {
+                if (!data) {
+                    resolve(data)
+                } else {
                     resolve(JSON.parse(data))
+                }
             });
 
         }).on("error", (err) => {
             reject("Error: " + err.message);
         });
     })
-
 }
 
 module.exports = {

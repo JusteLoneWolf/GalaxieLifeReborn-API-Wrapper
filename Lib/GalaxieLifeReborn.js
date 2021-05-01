@@ -78,9 +78,13 @@ class GalaxieLifeReborn{
 
     getAlliance(name) {
         return new Promise(((resolve, reject) => {
-            this.utils.request('https://mariflash.galaxylifereborn.com/alliances/info?name='+name).then((data) =>{
-                resolve({name:data.name,owner:data.owner,memberCount:data.memberCount})
-            }).catch((err) =>{
+            this.utils.request('https://mariflash.galaxylifereborn.com/alliances/info?name=' + name).then((data) => {
+                if (data) {
+                    resolve({name: data.name, owner: data.owner, memberCount: data.memberCount})
+                } else {
+                    reject({error: 404, message: "Alliance not found"})
+                }
+            }).catch((err) => {
                 reject(err)
             })
         }))
@@ -93,9 +97,13 @@ class GalaxieLifeReborn{
      */
     getAllianceMember(name) {
         return new Promise(((resolve, reject) => {
-            this.utils.request('https://mariflash.galaxylifereborn.com/alliances/members?name='+name).then((data) =>{
-                resolve(data)
-            }).catch((err) =>{
+            this.utils.request('https://mariflash.galaxylifereborn.com/alliances/members?name=' + name).then((data) => {
+                if (data) {
+                    resolve(data)
+                } else {
+                    reject({error: 404, message: "Alliance not found"})
+                }
+            }).catch((err) => {
                 reject(err)
             })
         }))
