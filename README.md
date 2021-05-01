@@ -51,7 +51,7 @@ GLR.getUserProfile("IamUser").then((data) =>{
 })
 
 GLR.getAlliance("IamAlliance").then((data) =>{
-    console.log(data) //Return UserProfile
+    console.log(data) //Return Alliance
 }).catch((err) =>{
     console.log(err)
 })
