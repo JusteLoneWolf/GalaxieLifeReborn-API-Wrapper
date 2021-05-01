@@ -11,7 +11,7 @@ class GalaxieLifeReborn{
     getUserProfile(username){
         return new Promise(((resolve, reject) => {
             this.utils.request("https://api.galaxylifereborn.com/modules/botuser?info="+username).then(data => {
-                if(data !== "false"){
+                if(data){
                         let buildData = {}
                         let {id, createdAt, username, rankType, friends} = data
                         let parsedFriend = JSON.parse(friends)
