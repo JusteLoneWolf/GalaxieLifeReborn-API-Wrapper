@@ -1,1 +1,1 @@
-module.exports = require('./Lib/GalaxieLifeReborn')
+module.exports = (new (require('./Lib/GalaxieLifeReborn')))

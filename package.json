@@ -1,0 +1,32 @@
+{
+  "name": "galaxielifereborn-api-wrapper",
+  "version": "1.0.0",
+  "description": "A simple NodeJS module for Galaxie Life Reborn",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zechaos031/GalaxieLifeReborn-API-Wrapper.git"
+  },
+  "keywords": [
+    "GalaxieLifeReborn",
+    "Life",
+    "Reborn",
+    "Galaxie",
+    "Life",
+    "Reborn",
+    "wrapper",
+    "api",
+    "module",
+    "GLR"
+  ],
+  "author": "zechaos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zechaos031/GalaxieLifeReborn-API-Wrapper/issues"
+  },
+  "homepage": "https://github.com/zechaos031/GalaxieLifeReborn-API-Wrapper#readme",
+  "devDependencies": {}
+}
